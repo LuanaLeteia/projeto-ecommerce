@@ -12,43 +12,56 @@
         rel="stylesheet">
 
     <link rel="stylesheet" href="css/reset.css">
-    <link rel="stylesheet" href="css/base.css">
-    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/variables.css">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
-    <header>
-        <a href="">
-            <img src="./assets/images/logo.svg" alt="Logo">
-        </a>
+    <header class="cabecalho">
+        <div class="header-conteudo">
+            <div class="header-esquerda">
+                <button class="menu-hamburguer">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
 
-        <nav>
-            <ul>
-                <li>
-                    <a href="#home">Home</a>
-                </li>
+                <a href="/" class="logo">
+                    <img src="./assets/images/logo.svg" alt="Logo">
+                </a>
+            </div>
 
-                <li>
-                    <a href="#sobre">Sobre</a>
-                </li>
+            <nav class="menu-principal">
+                <ul>
+                    <li>
+                        <a href="#home">Home</a>
+                    </li>
 
-                <li>
-                    <a href="#produtos">Produtos</a>
-                </li>
+                    <li>
+                        <a href="#sobre">Sobre</a>
+                    </li>
 
-                <li>
-                    <a href="#faq">Perguntas Frequentes</a>
-                </li>
+                    <li>
+                        <a href="#produtos">Produtos</a>
+                    </li>
 
-                <li>
-                    <a href="#contato">Fale Conosco</a>
-                </li>
-            </ul>
-        </nav>
+                    <li>
+                        <a href="#faq">Perguntas Frequentes</a>
+                    </li>
 
-        <button>
-            <img src="./assets/images/icone_carrinho.svg" alt="carrinho de compras">
-        </button>
+                    <li>
+                        <a href="#contato">Fale Conosco</a>
+                    </li>
+                </ul>
+            </nav>
+
+            <button class="botao-carrinho" data-micromodal-trigger="modal-1">
+                
+                <img src="./assets/images/icone_carrinho.svg" alt="carrinho de compras">
+
+                <span id="contador-carrinho">0</span>
+            </button>
+        </div>
     </header>
 
     <main>
