@@ -105,6 +105,29 @@ body {
     border-radius: 50%;
 }
 
+main{
+    grid-area: main;
+    padding: 1rem;
+}
+
+main section h2{
+    color: var(--cor-neutra-clara);
+    font-size: 1.5rem;
+    font-weight: 400;
+    letter-spacing: 0.1rem;
+    margin-bottom: 2rem;
+}
+
+main .produtos ul{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+main .produtos .produto{
+    background-color: green;
+}
+
 @media(min-width: 940px){
     
     .cabecalho .menu-principal {
