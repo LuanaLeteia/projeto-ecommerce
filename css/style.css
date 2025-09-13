@@ -1,7 +1,9 @@
 body {
     font-family: 'Roboto', sans-serif;
     background-color: var(--cor-neutra-escura);
+    color: var(--cor-neutra-clara);
     min-height: 100vh;
+
     display: grid;
     grid-template-rows: auto 1fr auto;
     grid-template-areas:
@@ -10,43 +12,11 @@ body {
         "footer";
 }
 
+/* ---------------- Header ---------------- */
 .cabecalho {
     grid-area: header;
     padding: 1.8rem 0;
 }
-
-.cabecalho .menu-principal {
-    display: none;
-    background-color: var(--cor-neutra-escura);
-    position: absolute;
-    top: 5rem;
-    left: 0;
-    width: 100%;
-    padding: 1rem;
-}
-
-.cabecalho .menu-principal ul{
-    display: flex;
-    flex-direction: column;
-    gap: 2rem;
-    padding: 1rem 0;
-}
-
-.cabecalho .menu-principal ul li a {
-    color: var(--cor-neutra-clara);
-    letter-spacing: 0.1rem;
-    text-decoration: none;
-    padding: 1rem;
-}
-
-.cabecalho .menu-principal ul li a:hover {
-    background-color: var(--cor-primaria-hover);
-}
-
-.cabecalho.menu-ativo .menu-principal {
-    display: block;
-}
-
 
 .header-conteudo {
     display: flex;
@@ -56,16 +26,16 @@ body {
     padding: 0 1rem;
 }
 
+.logo img {
+    max-width: 120px;
+    height: auto;
+    display: block;
+}
+
 .header-esquerda {
     display: flex;
     align-items: center;
     gap: 1rem;
-}
-
-.logo img {
-    max-width: 150px;
-    height: auto;
-    display: block;
 }
 
 .menu-hamburguer {
@@ -87,6 +57,38 @@ body {
     background-color: #ffffff;
 }
 
+.menu-principal {
+    display: none;
+    background-color: var(--cor-neutra-escura);
+    position: absolute;
+    top: 5rem;
+    left: 0;
+    width: 100%;
+    padding: 1rem;
+}
+
+.menu-principal ul {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    padding: 1rem 0;
+}
+
+.menu-principal ul li a {
+    color: var(--cor-neutra-clara);
+    letter-spacing: 0.1rem;
+    text-decoration: none;
+    padding: 1rem;
+}
+
+.menu-principal ul li a:hover {
+    background-color: var(--cor-primaria-hover);
+}
+
+.cabecalho.menu-ativo .menu-principal {
+    display: block;
+}
+
 .botao-carrinho {
     background: transparent;
     border: 0;
@@ -95,15 +97,15 @@ body {
     cursor: pointer;
 }
 
-.botao-carrinho span{
+.botao-carrinho span {
     background-color: var(--cor-primaria);
     color: var(--cor-neutra-clara);
     font-weight: 600;
     font-size: 0.7rem;
     position: absolute;
-    top: 30px;
-    left: 29px;
-
+    top: 0;
+    right: 0;
+    transform: translate(30%, -30%);
     display: flex;
     width: 16px;
     height: 16px;
@@ -112,50 +114,121 @@ body {
     border-radius: 50%;
 }
 
-main{
+/* ---------------- Main ---------------- */
+main {
     grid-area: main;
-    padding: 1rem;
+    padding: 2rem;
 }
 
-main section h2{
-    color: var(--cor-neutra-clara);
+main section h2 {
     font-size: 1.5rem;
     font-weight: 400;
     letter-spacing: 0.1rem;
     margin-bottom: 2rem;
 }
 
-main .produtos ul{
-    display: flex;
-    flex-direction: column;
+.produtos ul {
+    display: grid;
     gap: 2rem;
 }
 
-main .produtos .produto{
-    background-color: green;
+.produto {
+    background-color: var(--cor-cinza-escura);
+    padding: 1rem;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+    text-align: center;
 }
 
-.produtos img {
+.produto img {
     max-width: 200px;
     height: auto;
+    margin: 0 auto;
     display: block;
+    border-radius: 4px;
 }
 
-@media(min-width: 940px){
-    
-    .cabecalho .menu-principal {
+.produto button {
+    margin-top: 0.5rem;
+    padding: 0.5rem 1rem;
+    background-color: var(--cor-primaria);
+    color: var(--cor-neutra-clara);
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.produto button:hover {
+    background-color: var(--cor-primaria-hover);
+}
+
+/* ---------------- Footer ---------------- */
+footer {
+    grid-area: footer;
+    background-color: var(--cor-cinza-escura);
+    padding: 2rem;
+    color: var(--cor-neutra-clara);
+}
+
+.footer-conteudo {
+    display: grid;
+    gap: 2rem;
+}
+
+.footer-conteudo nav h3 {
+    margin-bottom: 1rem;
+    font-size: 1.1rem;
+    color: var(--cor-primaria);
+}
+
+.footer-conteudo ul {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.footer-conteudo a {
+    color: var(--cor-neutra-clara);
+    text-decoration: none;
+}
+
+.footer-conteudo a:hover {
+    color: var(--cor-primaria-hover);
+}
+
+.footer-copy {
+    margin-top: 2rem;
+    text-align: center;
+    font-size: 0.9rem;
+    color: var(--cor-cinza-clara);
+}
+
+/* ---------------- Responsividade ---------------- */
+@media (min-width: 940px) {
+    .menu-principal {
         display: block;
         position: static;
         width: auto;
+        background: transparent;
+        padding: 0;
     }
 
-    .cabecalho .menu-principal ul {
+    .menu-principal ul {
         flex-direction: row;
+        gap: 1.5rem;
+    }
+
+    .footer-conteudo {
+        grid-template-columns: repeat(3, 1fr);
     }
 }
 
-@media(min-width: 1440px){
-    .cabecalho {
+@media (min-width: 1440px) {
+    .cabecalho,
+    main,
+    footer {
         max-width: 1440px;
         margin: 0 auto;
     }
