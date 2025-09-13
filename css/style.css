@@ -2,9 +2,10 @@ body {
     font-family: 'Roboto', sans-serif;
     background-color: var(--cor-neutra-escura);
     min-height: 100vh;
+    display: grid;
     grid-template-rows: auto 1fr auto;
     grid-template-areas:
-        "heade"
+        "header"
         "main"
         "footer";
 }
@@ -59,6 +60,12 @@ body {
     display: flex;
     align-items: center;
     gap: 1rem;
+}
+
+.logo img {
+    max-width: 150px;
+    height: auto;
+    display: block;
 }
 
 .menu-hamburguer {
@@ -126,6 +133,12 @@ main .produtos ul{
 
 main .produtos .produto{
     background-color: green;
+}
+
+.produtos img {
+    max-width: 200px;
+    height: auto;
+    display: block;
 }
 
 @media(min-width: 940px){
