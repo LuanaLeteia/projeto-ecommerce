@@ -11,9 +11,9 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
         rel="stylesheet">
 
-    <link rel="stylesheet" href="css/reset.css">
-    <link rel="stylesheet" href="css/variables.css">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/variables.css">
+    <link rel="stylesheet" href="./css/style.css">
 </head>
 
 <body>
@@ -30,7 +30,7 @@
                     <span></span>
                 </button>
             </div>
-            <nav class="menu-principal">
+            <nav class="menu-principal" id="menu-principal">
                 <ul>
                     <li><a href="#">Home</a></li>
                     <li><a href="#">Sobre</a></li>
@@ -43,7 +43,7 @@
                 <a href="#" class="btn-primario">Entrar ou Cadastrar-se</a>
                 <button class="botao-carrinho">
                     <img src="./assets/images/icone_carrinho.svg" alt="Carrinho">
-                    <span>2</span>
+                    <span>0</span>
                 </button>
             </div>
         </div>
@@ -54,40 +54,45 @@
         <section class="produtos">
             <h2>Produtos</h2>
             <ul>
-                <li class="produto">
+                <li class="produto" data-nome="Camiseta Roxa" data-preco="89.00"
+                    data-img="./assets/images/Camiseta - Hollow Knight Silksong.png">
                     <img src="./assets/images/Camiseta - Hollow Knight Silksong.png" alt="Camiseta Roxa">
                     <h3>Camiseta Roxa</h3>
                     <p class="preco">R$ 89,00</p>
-                    <button>Adicionar ao carrinho</button>
+                    <button class="btn-add">Adicionar ao carrinho</button>
                 </li>
 
-                <li class="produto">
+                <li class="produto" data-nome="Boné Preto" data-preco="25.00"
+                    data-img="./assets/images/Boné - Hollow Knight Silksong.png">
                     <img src="./assets/images/Boné - Hollow Knight Silksong.png" alt="Boné Preto">
                     <h3>Boné Preto</h3>
                     <p class="preco">R$ 25,00</p>
-                    <button>Adicionar ao carrinho</button>
+                    <button class="btn-add">Adicionar ao carrinho</button>
                 </li>
 
-                <li class="produto">
+                <li class="produto" data-nome="Caneca" data-preco="20.00"
+                    data-img="./assets/images/Caneca - Hollow Knight Silksong.png">
                     <img src="./assets/images/Caneca - Hollow Knight Silksong.png" alt="Caneca">
                     <h3>Caneca</h3>
                     <p class="preco">R$ 20,00</p>
-                    <button>Adicionar ao carrinho</button>
+                    <button class="btn-add">Adicionar ao carrinho</button>
                 </li>
 
-                <li class="produto">
+                <li class="produto" data-nome="Moletom Preto" data-preco="120.00"
+                    data-img="./assets/images/Moletom - Hollow Knight Silksong.png">
                     <img src="./assets/images/Moletom - Hollow Knight Silksong.png" alt="Moletom Preto">
                     <h3>Moletom Preto</h3>
                     <p class="preco">R$ 120,00</p>
-                    <button>Adicionar ao carrinho</button>
+                    <button class="btn-add">Adicionar ao carrinho</button>
                 </li>
 
-                <li class="produto">
+                <li class="produto" data-nome="Kit Camiseta + Caneca" data-preco="100.00"
+                    data-img="./assets/images/Kit Camiseta e Boné - Hollow Knight Silksong.png">
                     <img src="./assets/images/Kit Camiseta e Boné - Hollow Knight Silksong.png"
-                        alt="Kit - Camiseta e Caneca">
+                        alt="Kit Camiseta e Caneca">
                     <h3>Kit - Camiseta e Caneca</h3>
                     <p class="preco">R$ 100,00</p>
-                    <button>Adicionar ao carrinho</button>
+                    <button class="btn-add">Adicionar ao carrinho</button>
                 </li>
             </ul>
         </section>
@@ -110,18 +115,10 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <tr>
-                        <td><img src="./assets/images/camisa-roxa.png" alt="Camiseta Roxa"></td>
-                        <td>Camiseta Roxa</td>
-                        <td>R$ 89,00</td>
-                        <td><input type="number" value="1" min="1"></td>
-                        <td>R$ 89,00</td>
-                        <td><button class="btn-deletar">Deletar</button></td>
-                    </tr>
                 </tbody>
             </table>
             <div class="carrinho-total">
-                <p>Total: R$ 89,00</p>
+                <p>Total: R$ 0,00</p>
                 <button class="btn-primario">Finalizar compra</button>
             </div>
         </div>
@@ -155,11 +152,11 @@
             </nav>
         </div>
         <div class="footer-copy">
-            <p>@2025 - Todos os direitos reservados.</p>
+            <p>@2025 - Criado por Luana Letéia.</p>
         </div>
     </footer>
-</body>
 
-<script src="./js/index.js"></script>
+    <script src="./js/index.js"></script>
+</body>
 
 </html>
