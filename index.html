@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>E-commerce Silksong</title>
+    <title>E-commerce Master</title>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -17,146 +17,238 @@
 </head>
 
 <body>
-    <!-- Header -->
     <header class="cabecalho">
         <div class="header-conteudo">
             <div class="header-esquerda">
-                <a href="/" class="logo">
-                    <img src="./assets/images/logo.png" alt="Logo">
-                </a>
-                <button class="menu-hamburguer" id="menu-toggle">
+
+                <button class="menu-hamburguer">
                     <span></span>
                     <span></span>
                     <span></span>
                 </button>
+
+                <a class="logo" href="/">
+                    <img src="./assets/images/logo.png" alt="Logo Silksong">
+                </a>
             </div>
-            <nav class="menu-principal" id="menu-principal">
+
+            <nav class="menu-principal">
                 <ul>
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">Sobre</a></li>
-                    <li><a href="#">Produtos</a></li>
-                    <li><a href="#">Perguntas Frequentes</a></li>
-                    <li><a href="#">Fale Conosco</a></li>
+                    <li>
+                        <a href="#home">Home</a>
+                    </li>
+
+                    <li>
+                        <a href="#sobre">Sobre</a>
+                    </li>
+
+                    <li>
+                        <a href="#produtos">Produtos</a>
+                    </li>
+
+                    <li>
+                        <a href="#faq">Perguntas Frequentes</a>
+                    </li>
+
+                    <li>
+                        <a href="#contato">Fale Conosco</a>
+                    </li>
                 </ul>
             </nav>
-            <div class="header-direita">
-                <a href="#" class="btn-primario">Entrar ou Cadastrar-se</a>
-                <button class="botao-carrinho">
-                    <img src="./assets/images/icone_carrinho.svg" alt="Carrinho">
-                    <span>0</span>
-                </button>
-            </div>
+
+            <button class="botao-carrinho" data-micromodal-trigger="modal-1">
+
+                <img src="./assets/images/icone_carrinho.svg" alt="Carrinho de Compras" />
+
+                <span id="contador-carrinho">0</span>
+            </button>
         </div>
     </header>
 
-    <!-- Main -->
     <main>
         <section class="produtos">
             <h2>Produtos</h2>
             <ul>
-                <li class="produto" data-nome="Camiseta Roxa" data-preco="89.00"
-                    data-img="./assets/images/Camiseta - Hollow Knight Silksong.png">
-                    <img src="./assets/images/Camiseta - Hollow Knight Silksong.png" alt="Camiseta Roxa">
-                    <h3>Camiseta Roxa</h3>
-                    <p class="preco">R$ 89,00</p>
-                    <button class="btn-add">Adicionar ao carrinho</button>
+                <li class="produto" data-id="camiseta-roxa">
+                    <figure>
+                        <img src="./assets/images/Camiseta - Hollow Knight Silksong.png" alt="Camiseta Silksong - Roxa">
+                        <figcaption class="nome">Camiseta Silksong</figcaption>
+                    </figure>
+                    <div class="informacoes">
+                        <span><strong>Cor: Roxa</strong></span>
+                        <span><strong>Tamanho: M</strong></span>
+                        <span class="preco">R$ 89,00</span>
+                        <button class="adicionar-ao-carrinho">Adicionar ao carrinho</button>
+                    </div>
                 </li>
 
-                <li class="produto" data-nome="Boné Preto" data-preco="25.00"
-                    data-img="./assets/images/Boné - Hollow Knight Silksong.png">
-                    <img src="./assets/images/Boné - Hollow Knight Silksong.png" alt="Boné Preto">
-                    <h3>Boné Preto</h3>
-                    <p class="preco">R$ 25,00</p>
-                    <button class="btn-add">Adicionar ao carrinho</button>
+                <li class="produto" data-id="kit">
+                    <figure>
+                        <img src="./assets/images/Kit Camiseta e Boné - Hollow Knight Silksong.png" alt="Kit Silksong - Camiseta e Caneca">
+                        <figcaption class="nome">Kit Silksong - Camiseta e Caneca</figcaption>
+                    </figure>
+                    <div class="informacoes">
+                        <span><strong>Cor: Azul</strong></span>
+                        <span><strong>Tamanho: M</strong></span>
+                        <span class="preco">R$ 105,00</span>
+                        <button class="adicionar-ao-carrinho">Adicionar ao carrinho</button>
+                    </div>
                 </li>
 
-                <li class="produto" data-nome="Caneca" data-preco="20.00"
-                    data-img="./assets/images/Caneca - Hollow Knight Silksong.png">
-                    <img src="./assets/images/Caneca - Hollow Knight Silksong.png" alt="Caneca">
-                    <h3>Caneca</h3>
-                    <p class="preco">R$ 20,00</p>
-                    <button class="btn-add">Adicionar ao carrinho</button>
+                <li class="produto" data-id="bone">
+                    <figure>
+                        <img src="./assets/images/Boné - Hollow Knight Silksong.png" alt="Boné Silksong">
+                        <figcaption class="nome">Boné Silksong</figcaption>
+                    </figure>
+                    <div class="informacoes">
+                        <span><strong>Cor: Preto</strong></span>
+                        <span><strong>Tamanho: unico</strong></span>
+                        <span class="preco">R$ 30,00</span>
+                        <button class="adicionar-ao-carrinho">Adicionar ao carrinho</button>
+                    </div>
                 </li>
 
-                <li class="produto" data-nome="Moletom Preto" data-preco="120.00"
-                    data-img="./assets/images/Moletom - Hollow Knight Silksong.png">
-                    <img src="./assets/images/Moletom - Hollow Knight Silksong.png" alt="Moletom Preto">
-                    <h3>Moletom Preto</h3>
-                    <p class="preco">R$ 120,00</p>
-                    <button class="btn-add">Adicionar ao carrinho</button>
+                <li>
+                    <figure class="produto" data-id="caneca-branca">
+                        <img src="./assets/images/Caneca - Hollow Knight Silksong.png" alt="Caneca Silksong">
+                        <figcaption class="nome">Caneca Silksong</figcaption>
+                    </figure>
+                    <div class="informacoes">
+                        <span><strong>Cor: Branca</strong></span>
+                        <span><strong>Tamanho: único</strong></span>
+                        <span class="preco">R$ 25,00</span>
+                        <button class="adicionar-ao-carrinho">Adicionar ao carrinho</button>
+                    </div>
                 </li>
 
-                <li class="produto" data-nome="Kit Camiseta + Caneca" data-preco="100.00"
-                    data-img="./assets/images/Kit Camiseta e Boné - Hollow Knight Silksong.png">
-                    <img src="./assets/images/Kit Camiseta e Boné - Hollow Knight Silksong.png"
-                        alt="Kit Camiseta e Caneca">
-                    <h3>Kit - Camiseta e Caneca</h3>
-                    <p class="preco">R$ 100,00</p>
-                    <button class="btn-add">Adicionar ao carrinho</button>
+                <li>
+                    <figure class="produto" data-id="moletom-preto">
+                        <img src="./assets/images/Moletom - Hollow Knight Silksong.png" alt="Moletom Silksong">
+                        <figcaption class="nome">Moletom Silksong</figcaption>
+                    </figure>
+                    <div class="informacoes">
+                        <span><strong>Cor: Preto</strong></span>
+                        <span><strong>Tamanho: G</strong></span>
+                        <span class="preco">R$ 100,00</span>
+                        <button class="adicionar-ao-carrinho">Adicionar ao carrinho</button>
+                    </div>
                 </li>
             </ul>
         </section>
     </main>
 
-    <!-- Modal do Carrinho -->
-    <div class="modal" id="modal-carrinho">
-        <div class="modal-conteudo">
-            <button class="modal-fechar" id="fechar-carrinho">&times;</button>
-            <h2>Carrinho de compras</h2>
-            <table class="tabela-carrinho">
-                <thead>
-                    <tr>
-                        <th>Produto</th>
-                        <th>Descrição</th>
-                        <th>Preço</th>
-                        <th>Qtd</th>
-                        <th>Total</th>
-                        <th>Ação</th>
-                    </tr>
-                </thead>
-                <tbody>
-                </tbody>
-            </table>
-            <div class="carrinho-total">
-                <p>Total: R$ 0,00</p>
-                <button class="btn-primario">Finalizar compra</button>
+    <footer class="rodape">
+        <div class="container">
+            <nav>
+                <h3>Institucional</h3>
+                <ul>
+                    <li><a href="/">Home</a></li>
+                    <li><a href="#sobre">Sobre</a></li>
+                    <li><a href="#produtos">Produtos</a></li>
+                    <li><a href="#faq">Perguntas Frequentes</a></li>
+                    <li><a href="#contato">Fale Conosco</a></li>
+                </ul>
+            </nav>
+
+            <nav>
+                <h3>Ajuda</h3>
+                <ul>
+                    <li><a href="#trocas">Trocas e Devoluções</a></li>
+                    <li><a href="#termos">Termos e Condições</a></li>
+                    <li><a href="#politica">Politica de Privacidade</a></li>
+                    <li><a href="#padrao">Padrão de Qualidade</a></li>
+                </ul>
+            </nav>
+
+            <nav>
+                <h3>Endereço</h3>
+                <ul>
+                    <li><a href="#">Rua Vale do Silicio</a></li>
+                    <li>São Francisco, Califórnia</li>
+                    <li>Estados Unidos da América</li>
+                    <li><a href="#">(16) 99239-1333</a></li>
+                    <li><a href="#">luanaleteia@outlook.com</a></li>
+                </ul>
+            </nav>
+        </div>
+
+        <div class="copyright">
+            <p>@2025 - Feito por Luana Letéia</p>
+        </div>
+    </footer>
+
+    <div id="modal-1" class="modal" aria-hidden="true">
+        <div tabindex="-1" data-micromodal-close>
+            <div class="container" role="dialog" aria-modal="true" aria-labelledby="modal-1-title">
+
+
+                <header>
+                    <h2 id="modal-1-title">Carrinho de Compras</h2>
+
+                    <button class="fechar" aria-label="Close modal" data-micromodal-close></button>
+                </header>
+
+                <div id="modal-1-content">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th class="th-produto">Produto</th>
+                                <th>Descrição</th>
+                                <th>Preço</th>
+                                <th>Quantidade</th>
+                                <th class="th-total">Total</th>
+                                <th></th>
+                            </tr>
+                        </thead>
+
+                        <tbody>
+                            <tr>
+                                <td class="td-produto">
+                                    <img src="./assets/images/Camiseta - Hollow Knight Silksong.png" alt="Camiseta Silksong - Roxa">
+                                </td>
+                                <td>Camiseta Silksong</td>
+                                <td class="td-preco-unitario">R$ 89,00</td>
+                                <td class="td-quantidade"><input type="number" value="1" min="1"></td>
+                                <td class="td-preco-total">R$ 89,00</td>
+                                <td><button class="btn-remover" id="deletar"></button></td>
+                            </tr>
+
+                            <tr>
+                                <td class="td-produto">
+                                    <img src="./assets/images/Caneca - Hollow Knight Silksong.png" alt="Caneca Silksong">
+                                </td>
+                                <td>Caneca Silksong</td>
+                                <td class="td-preco-unitario">R$ 25,00</td>
+                                <td class="td-quantidade"><input type="number" value="1" min="1"></td>
+                                <td class="td-preco-total">R$ 25,00</td>
+                                <td><button class="btn-remover" id="deletar"></button></td>
+                            </tr>
+
+                            <tr>
+                                <td class="td-produto">
+                                    <img src="./assets/images/Moletom - Hollow Knight Silksong.png" alt="Moletom Silksong">
+                                </td>
+                                <td>Moletom Silksong</td>
+                                <td class="td-preco-unitario">R$ 100,00</td>
+                                <td class="td-quantidade"><input type="number" value="1" min="1"></td>
+                                <td class="td-preco-total">R$ 100,00</td>
+                                <td><button class="btn-remover" id="deletar"></button></td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <div class="container-preco">
+                        <span class="total-carrinho" id="total-carrinho">Total: R$ 0,00</span>
+                        <button class="finalizar-compra">Finalizar Compra</button>
+                    </div>
+
+                </div>
+
             </div>
         </div>
     </div>
 
-    <!-- Footer -->
-    <footer>
-        <div class="footer-conteudo">
-            <nav>
-                <h3>Links rápidos</h3>
-                <ul>
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">Produtos</a></li>
-                    <li><a href="#">Contato</a></li>
-                </ul>
-            </nav>
-            <nav>
-                <h3>Institucional</h3>
-                <ul>
-                    <li><a href="#">Sobre nós</a></li>
-                    <li><a href="#">Política de Privacidade</a></li>
-                    <li><a href="#">Termos de Uso</a></li>
-                </ul>
-            </nav>
-            <nav>
-                <h3>Ajuda</h3>
-                <ul>
-                    <li><a href="#">FAQ</a></li>
-                    <li><a href="#">Suporte</a></li>
-                </ul>
-            </nav>
-        </div>
-        <div class="footer-copy">
-            <p>@2025 - Criado por Luana Letéia.</p>
-        </div>
-    </footer>
-
-    <script src="./js/index.js"></script>
+    <script src="https://unpkg.com/micromodal/dist/micromodal.min.js"></script>
 </body>
 
 </html>
