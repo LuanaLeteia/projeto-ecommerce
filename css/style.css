@@ -59,11 +59,6 @@ body {
     gap: 1rem;
 }
 
-.logo img {
-    max-width: 100px;
-    height: auto;
-}
-
 .menu-hamburguer {
     width: 1.5rem;
     height: 1.5rem;
@@ -504,4 +499,52 @@ td .btn-remover {
     .td-quantidade {
         text-align: center;
     }
+}
+
+.carrinho {
+    display: none;
+    position: fixed;
+    top: 80px;
+    /* abaixo do header */
+    right: 20px;
+    width: 300px;
+    background: #fff;
+    border: 1px solid #ddd;
+    padding: 1rem;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    border-radius: 8px;
+}
+
+.carrinho h2 {
+    margin-top: 0;
+    font-size: 1.2rem;
+}
+
+.carrinho ul {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 1rem 0;
+}
+
+.carrinho li {
+    padding: 0.3rem 0;
+    border-bottom: 1px solid #eee;
+    font-size: 0.9rem;
+}
+
+#fechar-carrinho {
+    display: block;
+    width: 100%;
+    padding: 0.6rem;
+    background: crimson;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 0.9rem;
+}
+
+#fechar-carrinho:hover {
+    background: darkred;
 }
