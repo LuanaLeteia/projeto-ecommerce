@@ -243,7 +243,8 @@
                         <tbody>
                             <tr>
                                 <td class="td-produto">
-                                    <img src="./assets/images/Camiseta - Hollow Knight Silksong.png" alt="Camiseta Silksong - Roxa">
+                                    <img src="./assets/images/Camiseta - Hollow Knight Silksong.png"
+                                        alt="Camiseta Silksong - Roxa">
                                 </td>
                                 <td>Camiseta Silksong</td>
                                 <td class="td-preco-unitario">R$ 89,00</td>
@@ -254,7 +255,8 @@
 
                             <tr>
                                 <td class="td-produto">
-                                    <img src="./assets/images/Caneca - Hollow Knight Silksong.png" alt="Caneca Silksong">
+                                    <img src="./assets/images/Caneca - Hollow Knight Silksong.png"
+                                        alt="Caneca Silksong">
                                 </td>
                                 <td>Caneca Silksong</td>
                                 <td class="td-preco-unitario">R$ 25,00</td>
@@ -266,7 +268,21 @@
                     </table>
 
                     <div class="container-preco">
-                        <span class="total-carrinho" id="total-carrinho">Total: R$ 0,00</span>
+                        <div class="container-cep-frete">
+                            <label for="cep">CEP:</label>
+                            <input type="text" id="cep" placeholder="Digite seu CEP" />
+                            <button id="calcular-frete">Calcular Frete</button>
+                        </div>
+
+                        <div class="container-preco-total">
+                            <span id="subtotal-pedidos">Subtotal dos pedidos: <span class="valor">R$ 100,00</span>
+                            </span>
+
+                            <span id="valor-frete">Valor do Frete: <span></span></span>
+
+                            <span class="total-carrinho" id="total-carrinho">Total: R$ 1200,00</span>
+                        </div>
+
                         <button class="finalizar-compra">Finalizar Compra</button>
                     </div>
 
