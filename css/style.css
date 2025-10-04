@@ -453,13 +453,13 @@ td .btn-remover {
 }
 
 #subtotal-pedidos .valor, #valor-frete .valor {
-    color: #6affb7;
+    color: var(--cor-acao-carrinho);
     font-weight: 500;
     margin-left: 8px;
 }
 
 #total-carrinho {
-    color: #6affb7;
+    color: var(--cor-acao-carrinho);
     font-size: 1.5rem;
     font-weight: bold;
     margin-top: 8px;
@@ -471,27 +471,27 @@ td .btn-remover {
     padding: 8px 12px;
     width: 100%;
     max-width: 220px;
-    border: 1px solid #6affb7;
+    border: 1px solid var(--cor-acao-carrinho);
     border-radius: 6px;
     background: transparent;
-    color: #6affb7;
+    color: var(--cor-acao-carrinho);
     font-weight: 400;
     outline: none;
     transition: border-color 0.2s;
 }
 
 #input-cep::placeholder {
-    color: #6affb7;
+    color: var(--cor-acao-carrinho);
     opacity: 0.5;
     font-weight: 400;
 }
 
 #btn-calcular-frete {
     padding: 8px 20px;
-    border: 1px solid #6affb7;
+    border: 1px solid var(--cor-acao-carrinho);
     border-radius: 6px;
     background: transparent;
-    color: #6affb7;
+    color: var(--cor-acao-carrinho);
     font-size: 1rem;
     font-weight: 500;
     cursor: pointer;
@@ -501,7 +501,7 @@ td .btn-remover {
 
 #btn-calcular-frete:hover,
 #btn-calcular-frete:focus {
-    background: #6affb7;
+    background: var(--cor-acao-carrinho);
     color: #1a1a2e;
 }
 
