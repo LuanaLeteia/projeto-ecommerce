@@ -29,5 +29,5 @@ O projeto foi desenvolvido seguindo a abordagem **Mobile First**, garantindo boa
 
 
 ## 📸 Prévia do Projeto
-> <img width="1015" height="615" alt="image" src="https://github.com/user-attachments/assets/35ec6d6a-3e90-4fc0-844a-ad758e2b0ba0" />
+<img width="1015" height="615" alt="image" src="https://github.com/user-attachments/assets/35ec6d6a-3e90-4fc0-844a-ad758e2b0ba0" />
 
