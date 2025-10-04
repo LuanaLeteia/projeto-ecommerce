@@ -12,7 +12,7 @@ O sistema simula uma loja online com carrinho de compras interativo e integraç�
 ---
 
 ## 🚀 Tecnologias utilizadas
-- HTML5  
+- HTML  
 - CSS  
 - JavaScript
 - API  
@@ -36,7 +36,6 @@ O projeto foi desenvolvido seguindo a abordagem **Mobile First**, garantindo boa
 ✔️ **Cálculo de frete** integrado via **n8n**  
 ✔️ Layout responsivo  
 
----
 
 ## 📸 Prévia do Projeto
 >
